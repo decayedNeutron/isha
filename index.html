@@ -281,12 +281,7 @@
                 
                 // Play a silent sound to unlock audio on iOS/Chrome
 			const allSounds = [noSound, yaySound, ...Object.values(panelSounds)];
-                allSounds.forEach(sound => {
-                    sound.play().then(() => {
-                        sound.pause();
-                        sound.currentTime = 0;
-                    }).catch(e => console.log("Unlock failed for a sound", e));
-                });
+              
 
             }, 800);
         }
